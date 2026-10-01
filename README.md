@@ -77,8 +77,8 @@ To also commit and push the refreshed demo to this repo in one step, run `npm ru
 When you release a new version:
 1. Update the version in `app/manifest.json`.
 2. Run `npm run pack`.
-3. Create a GitHub release for the new version and attach `app/dist/teleport-v<version>.zip` to it.
-4. Update the download links in `index.html` to the release asset URL, and update the "Version" text in the hero.
+3. Create a GitHub release (tag `v<version>`) and attach `app/dist/teleport-v<version>.zip` to it.
+4. In `index.html`, change the version in the three download links (`.../releases/download/v<version>/teleport-v<version>.zip`) and the "Version" text in the hero.
 
 Things you edit by hand: `index.html`, `styles.css`, `script.js`, `demo.js`, `demo/demo-shim.js` and `assets/`.
 
@@ -88,7 +88,7 @@ To refresh `assets/screenshot.png`, take a new screenshot of the popup (640 px w
 
 Upload the contents of this folder to any static host, such as Netlify, Cloudflare Pages, GitHub Pages or your own server. Set the publish directory to `website`. There is nothing to build.
 
-The generated files in `demo/` must be included in what you deploy, so they are not git-ignored. Zip files are git-ignored, so the download links must point to the GitHub release, not to `downloads/`.
+The generated files in `demo/` must be included in what you deploy, so they are not git-ignored. Zip files are git-ignored. The download links already point at the GitHub release (`v1.0.0`).
 
 ## License
 
