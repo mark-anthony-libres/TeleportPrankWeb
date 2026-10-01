@@ -1,0 +1,16 @@
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+*.log
+
+*.zip
+
+node_modules/
+.netlify/
+.vercel/

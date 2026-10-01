@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teleport</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <div class="app-title">
+        <img class="app-icon" src="icon48.png" width="26" height="26" alt="">
+        <h1>Teleport</h1>
+      </div>
+      <div class="header-controls">
+        <div id="status" class="status-pill inactive">
+          <span class="status-dot"></span>
+          <span id="statusText">Inactive</span>
+        </div>
+        <label class="power-toggle" title="Turn override on/off">
+          <input type="checkbox" id="activeToggle">
+          <span class="power-toggle-track"><span class="power-toggle-thumb"></span></span>
+          <span class="power-toggle-label" id="powerToggleLabel">Off</span>
+        </label>
+        <button type="button" id="toggleSidebar" class="sidebar-toggle-btn" title="Show/hide saved locations panel" aria-label="Toggle sidebar">⟩</button>
+      </div>
+    </header>
+
+    <div class="content">
+      <main class="main-column">
+        <section class="search-section">
+          <div class="search-bar">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="locationSearch" placeholder="Search for a place or address..." autocomplete="off">
+            <button type="button" id="searchButton" class="btn-icon" title="Search" aria-label="Search">Go</button>
+          </div>
+          <div id="searchResults" class="search-results"></div>
+        </section>
+
+        <section class="map-section">
+          <div id="map" class="map-container"></div>
+          <div class="map-controls">
+            <button id="useCurrentLocation" class="btn btn-secondary" title="Try to get location from the current webpage (requires permission)">
+              <span class="btn-emoji">🧭</span> Get from Page
+            </button>
+            <button id="clearLocation" class="btn btn-secondary">
+              <span class="btn-emoji">🗑️</span> Clear
+            </button>
+          </div>
+        </section>
+
+        <p class="info-text">💡 Click anywhere on the map, drag the marker, or search above to set a location.</p>
+      </main>
+
+      <aside class="sidebar" id="sidebar">
+        <section class="coordinates-section">
+          <h2 class="sidebar-heading">Manual Coordinates</h2>
+          <div class="coords-grid">
+            <div class="input-group">
+              <label for="latitude">Latitude</label>
+              <input type="number" id="latitude" step="any" placeholder="40.7128">
+            </div>
+            <div class="input-group">
+              <label for="longitude">Longitude</label>
+              <input type="number" id="longitude" step="any" placeholder="-74.0060">
+            </div>
+          </div>
+          <div class="coord-actions">
+            <button type="button" id="applyLocation" class="btn btn-primary">Apply Location</button>
+            <button type="button" id="copyCoords" class="btn-icon-square" title="Copy coordinates" aria-label="Copy coordinates">📋</button>
+          </div>
+        </section>
+
+        <div class="tabs" role="tablist">
+          <button type="button" class="tab-btn active" data-tab="saved" role="tab">⭐ Saved</button>
+          <button type="button" class="tab-btn" data-tab="recent" role="tab">🕑 Recent</button>
+        </div>
+
+        <div id="savedPanel" class="tab-panel active">
+          <div class="save-current-row">
+            <input type="text" id="saveLocationName" placeholder="Name this location..." maxlength="40">
+            <button type="button" id="saveCurrentLocation" class="btn-icon-square" title="Save current location" aria-label="Save current location">＋</button>
+          </div>
+          <div class="list-filter-row">
+            <span class="list-filter-icon">🔎</span>
+            <input type="text" id="savedFilter" class="list-filter-input" placeholder="Filter saved locations...">
+          </div>
+          <ul id="savedList" class="location-list"></ul>
+        </div>
+
+        <div id="recentPanel" class="tab-panel">
+          <ul id="recentList" class="location-list"></ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+
+  <link rel="stylesheet" href="leaflet.css" />
+  <script src="leaflet.js"></script>
+  <script src="demo-shim.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
