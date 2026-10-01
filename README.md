@@ -14,6 +14,7 @@ Developed by [marklibres.site](https://marklibres.site).
 - FAQ
 - Download banner with the mascot
 - Light theme and a responsive layout for phones
+- Animations: hero entrance, floating mascot and stickers, and scroll-reveal on every section (disabled when the visitor prefers reduced motion)
 
 ## Run it locally
 
@@ -32,6 +33,7 @@ When opened as a local file, the demo map uses Esri tiles. When hosted over http
 |-- styles.css          # Site styles
 |-- script.js           # Browser-aware install link and copy button
 |-- demo.js             # Hosts the live demo and the "What a website sees" panel
+|-- motion.js           # Scroll-reveal animations (skipped for reduced motion)
 |-- assets/
 |   |-- icon.png        # Extension icon
 |   |-- screenshot.png  # Hero screenshot of the popup
