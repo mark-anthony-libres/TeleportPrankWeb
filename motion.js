@@ -85,6 +85,7 @@
     ['.demo-frame-wrap', 'zoom'],
     ['.demo-side', 'right'],
     ['.grid .card', 'up'],
+    ['.support-card', 'up'],
     ['.steps li', 'left'],
     ['details', 'up'],
     ['.cta', 'zoom'],

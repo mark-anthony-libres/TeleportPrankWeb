@@ -26,6 +26,7 @@
         <a href="#features">Features</a>
         <a href="#install">Install</a>
         <a href="#faq">FAQ</a>
+        <a href="#support">Support</a>
         <a class="btn btn-primary btn-small" href="downloads/teleport-v1.0.0.zip" download>Download</a>
       </nav>
     </div>
@@ -199,17 +200,17 @@
       </div>
     </section>
 
-    <section id="install">
-      <div class="wrap">
+    <section id="install" data-parallax-bg>
+      <div class="wrap install-wrap">
         <div class="section-head">
           <h2>Install in 2 minutes</h2>
-          <img class="section-mascot" src="assets/mascot/laptop.webp" width="298" height="422" alt="" aria-hidden="true">
         </div>
         <p class="section-lead">The extension is not in a browser store yet, so you add it manually. You only do this once.</p>
         <ol class="steps">
           <li>
             <strong>Download and unzip.</strong>
             <span>Get the <a href="downloads/teleport-v1.0.0.zip" download>zip file</a> and extract it to a folder you will keep, such as <code>Documents\Teleport</code>. Do not delete the folder afterwards.</span>
+            <img class="step-art" src="assets/install/folder.webp" width="210" height="202" alt="" aria-hidden="true">
           </li>
           <li>
             <strong>Open your browser's extensions page.</strong>
@@ -218,20 +219,28 @@
               <button type="button" class="btn btn-ghost btn-small" id="copyUrl">Copy link</button>
             </span>
             <span class="hint" id="extHint">Paste it into the address bar. Browsers do not allow websites to open this page directly.</span>
+            <img class="step-art" src="assets/install/browser.webp" width="240" height="154" alt="" aria-hidden="true">
           </li>
           <li>
             <strong>Turn on Developer mode.</strong>
             <span>Use the switch on the extensions page.</span>
+            <span class="step-art chip-toggle" aria-hidden="true">Developer mode <i></i></span>
           </li>
           <li>
             <strong>Click "Load unpacked".</strong>
             <span>Select the folder you extracted in step 1.</span>
+            <span class="step-art chip-load" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20"><path fill="#fff" d="M3 6.5A2.5 2.5 0 0 1 5.5 4H10l2 2.5h6.5A2.5 2.5 0 0 1 21 9v8.5a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5Z"/></svg>Load unpacked<svg class="cursor" viewBox="0 0 24 24" width="34" height="34"><path fill="#4f46e5" stroke="#fff" stroke-width="1.5" stroke-linejoin="round" d="M4 3l15 8.5-6.5 1.7L9.8 20Z"/></svg></span>
           </li>
           <li>
             <strong>Pin it and go.</strong>
             <span>Click the puzzle-piece icon in the toolbar, pin Teleport Prank, then click it to pick a location. Refresh any open tabs.</span>
+            <span class="step-art chip-pin" aria-hidden="true"><img src="assets/install/puzzle.webp" width="90" height="87" alt=""><b><img src="assets/icon.png" width="26" height="26" alt="">Teleport Prank<svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4f46e5" d="M14.5 3 21 9.5l-2 1-3.5-.5-3 3 .5 5-1.5 1.5-4-4L3 21l-1-1 5.5-4.5-4-4L5 10l5 .5 3-3-.5-3.500Z"/></svg></b></span>
           </li>
         </ol>
+        <div class="install-hero" aria-hidden="true">
+          <img class="install-mascot" src="assets/install/mascot.webp" width="488" height="395" alt="">
+          <img class="install-cloud" src="assets/install/cloud.webp" width="321" height="184" alt="">
+        </div>
       </div>
     </section>
 
@@ -265,6 +274,36 @@
           <summary>Can I copy or redistribute it?</summary>
           <p>Personal use is allowed. Copying, modifying and redistributing are not. The license is included in the project.</p>
         </details>
+      </div>
+    </section>
+
+    <section id="support">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Questions, bugs or ideas?</h2>
+          <img class="section-mascot" src="assets/pack/plane.webp" width="243" height="202" alt="" aria-hidden="true">
+        </div>
+        <p class="section-lead">Something not working, or got a suggestion? Send me an email and include a few details so I can help faster.</p>
+        <div class="support-card">
+          <div class="support-col">
+            <h3>Email support</h3>
+            <p class="support-mail"><span id="supportAddress">marklibres345 [at] gmail.com</span></p>
+            <div class="support-actions">
+              <a class="btn btn-primary" id="supportMail" href="#support">Send an email</a>
+              <button type="button" class="btn btn-ghost" id="copyMail">Copy address</button>
+            </div>
+            <p class="support-note">The button opens your email app with a message ready to fill in.</p>
+          </div>
+          <div class="support-col">
+            <h3>Details that help</h3>
+            <ul class="support-list">
+              <li>Your browser and version, for example Edge or Chrome</li>
+              <li>The Teleport version (1.0.0)</li>
+              <li>The website where it did not work</li>
+              <li>What you expected and what happened instead</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 

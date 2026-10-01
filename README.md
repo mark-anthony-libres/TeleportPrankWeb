@@ -10,8 +10,9 @@ Developed by [marklibres.site](https://marklibres.site).
 - How it works (3 steps)
 - **Live demo**: the real extension popup running in the page, with clickable landmark stickers (Paris, New York, Tokyo, London, Singapore) that set the demo location
 - Features and use cases
-- Install guide with a browser-aware extensions link and a copy button
+- Install guide on a sky background (parallax) with frosted step cards, illustrations, a pointing mascot, and a browser-aware extensions link with a copy button
 - FAQ
+- Support section with a pre-filled "Send an email" button and a copy-address button (the address is assembled in the browser to make it harder for spam bots to scrape)
 - Download banner with the mascot
 - Light theme and a responsive layout for phones
 - Features section with a sky and clouds background that moves with a parallax on scroll (add `data-parallax-bg` to any other section to give it the same effect)
@@ -43,6 +44,7 @@ When opened as a local file, the demo map uses Esri tiles. When hosted over http
 |   |-- features-bg.jpg # Features section background artwork
 |   |-- mascot/         # Mascot poses (transparent WebP)
 |   |-- stickers/       # Prank Mode bubble and city photo cards (transparent WebP)
+|   |-- install/        # Install section artwork: background, mascot, folder, browser, cloud
 |   `-- pack/           # Wordmark, landmark stickers and mascot emotes (transparent WebP)
 |-- demo/               # The live demo (see below)
 |   |-- popup.html      # Generated from app/popup.html
