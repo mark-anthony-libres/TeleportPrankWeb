@@ -40,7 +40,8 @@
         '  .getCurrentPosition(pos => {\n' +
         '    pos.coords.latitude   // ' + loc.lat.toFixed(4) + '\n' +
         '    pos.coords.longitude  // ' + loc.lng.toFixed(4) + '\n' +
-        '  })';
+        '  })' +
+        (loc.timezone ? '\n\nIntl.DateTimeFormat()\n  .resolvedOptions().timeZone\n  // ' + loc.timezone : '');
     } else {
       statusEl.textContent = 'Override is off. Sites see your real location.';
       codeEl.textContent = 'navigator.geolocation\n  .getCurrentPosition(...)\n\n// your real location';

@@ -9,7 +9,7 @@ Developed by [marklibres.site](https://marklibres.site).
 - Hero with a tilted popup screenshot, the mascot, the "PRANK MODE ON!" sticker, city photo cards and a download button
 - How it works (3 steps)
 - **Live demo**: the real extension popup running in the page, with clickable landmark stickers (Paris, New York, Tokyo, London, Singapore) that set the demo location
-- Features and use cases
+- Features (map, search, coordinates, saved and recent places, timezone match, on/off switch) and use cases
 - Install guide on a sky background (parallax) with frosted step cards, illustrations, a pointing mascot, and a browser-aware extensions link with a copy button
 - FAQ
 - Support section with a pre-filled "Send an email" button and a copy-address button (the address is assembled in the browser to make it harder for spam bots to scrape)

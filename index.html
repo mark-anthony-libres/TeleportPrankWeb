@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teleport Prank - Fake your browser location for fun</title>
-  <meta name="description" content="Teleport Prank lets you fake your location on websites for fun. Pick a spot on the map and websites will see the location you chose. No account and no API key.">
+  <meta name="description" content="Teleport Prank lets you fake your location on websites for fun. Pick a spot on the map and websites will see the location and timezone you chose. No account and no API key.">
   <meta name="author" content="marklibres.site">
   <meta name="color-scheme" content="light">
   <link rel="icon" href="assets/icon.png">
@@ -39,7 +39,7 @@
           <h1>Be anywhere<br>your browser says<br><span class="grad">you are</span>
             <svg class="h1-plane" viewBox="0 0 48 40" width="52" height="44" aria-hidden="true"><path d="M2 18 46 2 34 38 24 24 2 18Z" fill="#6d4cf0"/><path d="M24 24 46 2 18 21Z" fill="#a78bfa"/></svg>
           </h1>
-          <p class="lead">Teleport Prank lets you fake your location on websites for fun. Pick a spot on the map and websites will see the location you chose. No account and no API key.</p>
+          <p class="lead">Teleport Prank lets you fake your location on websites for fun. Pick a spot on the map and websites will see the location and timezone you chose. No account and no API key.</p>
           <div class="hero-actions">
             <a class="btn btn-primary btn-large" href="https://github.com/mark-anthony-libres/TeleportPrankWeb/releases/latest/download/teleport.zip" download>
               <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0-5-5m5 5 5-5M4 20h16"/></svg>
@@ -92,7 +92,7 @@
             <svg class="how-icon" viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="18" width="56" height="28" rx="14" fill="#5b3fe0"/><circle cx="46" cy="32" r="10" fill="#fff"/></svg>
             <div>
               <h3>Turn it on</h3>
-              <p>Enable Teleport Prank and apply your fake location.</p>
+              <p>Enable Teleport Prank and apply your fake location and timezone.</p>
             </div>
           </li>
           <li>
@@ -100,7 +100,7 @@
             <svg class="how-icon" viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="10" width="52" height="44" rx="6" fill="#dcd7fb" stroke="#7c6cf0" stroke-width="3"/><path d="M6 20h52" stroke="#7c6cf0" stroke-width="3"/><circle cx="32" cy="37" r="11" fill="none" stroke="#5b3fe0" stroke-width="3"/><path d="M21 37h22M32 26c-5 6-5 16 0 22m0-22c5 6 5 16 0 22" fill="none" stroke="#5b3fe0" stroke-width="2.5"/></svg>
             <div>
               <h3>Browse as if you're there</h3>
-              <p>Websites will see the location you chose.</p>
+              <p>Websites will see the place you chose, and the local time there.</p>
             </div>
           </li>
         </ol>
@@ -168,6 +168,10 @@
           <div class="card">
             <h3>Recent places</h3>
             <p>Your last 8 locations are one click away. Star one to keep it.</p>
+          </div>
+          <div class="card">
+            <h3>Timezone match</h3>
+            <p>Sites also see the timezone of your chosen place, with the right clock and daylight saving. You can turn it off.</p>
           </div>
           <div class="card">
             <h3>On/Off switch</h3>
@@ -261,6 +265,10 @@
         <details>
           <summary>A site still shows my real location. Why?</summary>
           <p>Some sites guess your location from your IP address, which no extension can change. Make sure the switch is On, then refresh the page. Browser pages such as edge:// and chrome:// cannot be modified.</p>
+        </details>
+        <details>
+          <summary>Does it change my timezone, language or IP address?</summary>
+          <p>It changes your location and, by default, your timezone to match the place you pick. It does not change your language, and it cannot change your IP address. Only a VPN does that. Sites that guess your location from your IP can still see it.</p>
         </details>
         <details>
           <summary>Does it work in Chrome?</summary>

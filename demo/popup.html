@@ -70,6 +70,11 @@
             <button type="button" id="applyLocation" class="btn btn-primary">Apply Location</button>
             <button type="button" id="copyCoords" class="btn-icon-square" title="Copy coordinates" aria-label="Copy coordinates">📋</button>
           </div>
+          <label class="tz-row" title="Also make websites see the timezone of the selected place">
+            <input type="checkbox" id="matchTimezone" checked>
+            <span>Match timezone</span>
+          </label>
+          <div id="tzInfo" class="tz-info">Timezone: pick a location</div>
         </section>
 
         <div class="tabs" role="tablist">
@@ -100,6 +105,7 @@
 
   <link rel="stylesheet" href="leaflet.css" />
   <script src="leaflet.js"></script>
+  <script src="tz-lookup.js"></script>
   <script src="demo-shim.js"></script>
   <script src="popup.js"></script>
 </body>
