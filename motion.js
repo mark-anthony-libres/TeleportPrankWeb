@@ -2,6 +2,79 @@
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce || !('IntersectionObserver' in window)) return;
 
+  var band = document.querySelector('.hero-band');
+  if (band) {
+    var mx = 0, my = 0, tx = 0, ty = 0, frame = 0, scrollQueued = false;
+
+    var ease = function () {
+      mx += (tx - mx) * 0.08;
+      my += (ty - my) * 0.08;
+      band.style.setProperty('--mx', mx.toFixed(3));
+      band.style.setProperty('--my', my.toFixed(3));
+      if (Math.abs(tx - mx) > 0.002 || Math.abs(ty - my) > 0.002) {
+        frame = requestAnimationFrame(ease);
+      } else {
+        frame = 0;
+      }
+    };
+
+    if (window.matchMedia('(hover: hover)').matches) {
+      band.addEventListener('mousemove', function (e) {
+        var r = band.getBoundingClientRect();
+        tx = ((e.clientX - r.left) / r.width - 0.5) * 2;
+        ty = ((e.clientY - r.top) / r.height - 0.5) * 2;
+        if (!frame) frame = requestAnimationFrame(ease);
+      });
+      band.addEventListener('mouseleave', function () {
+        tx = 0;
+        ty = 0;
+        if (!frame) frame = requestAnimationFrame(ease);
+      });
+    }
+
+    var updateScroll = function () {
+      scrollQueued = false;
+      band.style.setProperty('--sy', Math.min(window.scrollY, band.offsetHeight).toFixed(1));
+    };
+
+    window.addEventListener('scroll', function () {
+      if (!scrollQueued) {
+        scrollQueued = true;
+        requestAnimationFrame(updateScroll);
+      }
+    }, { passive: true });
+
+    updateScroll();
+  }
+
+  var bgSections = document.querySelectorAll('[data-parallax-bg]');
+  if (bgSections.length) {
+    var bgQueued = false;
+
+    var updateBg = function () {
+      bgQueued = false;
+      var vh = window.innerHeight;
+      bgSections.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.bottom < -100 || r.top > vh + 100) return;
+        var offset = (r.top + r.height / 2) - vh / 2;
+        var y = Math.max(-70, Math.min(70, -offset * 0.18));
+        el.style.setProperty('--bgy', y.toFixed(1));
+      });
+    };
+
+    var queueBg = function () {
+      if (!bgQueued) {
+        bgQueued = true;
+        requestAnimationFrame(updateBg);
+      }
+    };
+
+    window.addEventListener('scroll', queueBg, { passive: true });
+    window.addEventListener('resize', queueBg);
+    updateBg();
+  }
+
   var groups = [
     ['section h2', 'up'],
     ['.section-lead', 'up'],

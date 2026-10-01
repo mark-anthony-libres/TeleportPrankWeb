@@ -35,10 +35,6 @@
     <div id="top" class="hero-band">
       <div class="wrap hero">
         <div class="hero-text">
-          <span class="pill">
-            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M7.5 6h9a5.5 5.5 0 0 1 5.4 6.5l-.7 4A3.2 3.2 0 0 1 15.9 19l-1.6-2H9.7l-1.6 2a3.2 3.2 0 0 1-5.3-2.5l-.7-4A5.5 5.5 0 0 1 7.5 6Zm.5 3H7v1H6v1.5h1v1h1.5v-1h1V10h-1V9Zm8.5.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm2 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/></svg>
-            PRANK YOUR LOCATION
-          </span>
           <h1>Be anywhere<br>your browser says<br><span class="grad">you are</span>
             <svg class="h1-plane" viewBox="0 0 48 40" width="52" height="44" aria-hidden="true"><path d="M2 18 46 2 34 38 24 24 2 18Z" fill="#6d4cf0"/><path d="M24 24 46 2 18 21Z" fill="#a78bfa"/></svg>
           </h1>
@@ -61,16 +57,18 @@
         </div>
 
         <div class="hero-visual">
-          <img class="float-card card-paris" src="assets/stickers/paris.webp" width="285" height="300" alt="" aria-hidden="true">
-          <img class="float-card card-ny" src="assets/stickers/newyork.webp" width="266" height="300" alt="" aria-hidden="true">
-          <img class="float-card card-tokyo" src="assets/stickers/tokyo.webp" width="273" height="300" alt="" aria-hidden="true">
+          <div class="layer layer-paris"><img class="float-card card-paris" src="assets/stickers/paris.webp" width="285" height="300" alt="" aria-hidden="true"></div>
+          <div class="layer layer-ny"><img class="float-card card-ny" src="assets/stickers/newyork.webp" width="266" height="300" alt="" aria-hidden="true"></div>
+          <div class="layer layer-tokyo"><img class="float-card card-tokyo" src="assets/stickers/tokyo.webp" width="273" height="300" alt="" aria-hidden="true"></div>
 
-          <div class="hero-popup">
-            <img src="assets/screenshot.png" width="640" height="515" alt="The Teleport popup showing a map of Paris, the active location in the header, manual coordinate fields, and a saved locations list.">
+          <div class="layer-popup">
+            <div class="hero-popup">
+              <img src="assets/screenshot.png" width="640" height="515" alt="The Teleport popup showing a map of Paris, the active location in the header, manual coordinate fields, and a saved locations list.">
+            </div>
           </div>
 
-          <img class="hero-mascot" src="assets/mascot/peek.webp" width="284" height="640" alt="" aria-hidden="true">
-          <img class="bubble" src="assets/stickers/bubble.webp" width="440" height="281" alt="Prank mode on!">
+          <div class="layer layer-mascot"><img class="hero-mascot" src="assets/mascot/peek.webp" width="284" height="640" alt="" aria-hidden="true"></div>
+          <div class="layer layer-bubble"><img class="bubble" src="assets/stickers/bubble.webp" width="440" height="281" alt="Prank mode on!"></div>
         </div>
       </div>
     </div>
@@ -142,10 +140,10 @@
       </div>
     </section>
 
-    <section id="features">
+    <section id="features" data-parallax-bg>
       <div class="wrap">
         <div class="section-head">
-          <h2>Everything you need, nothing you don't</h2>
+          <h2>Your alibi is one click away</h2>
           <img class="section-mascot" src="assets/mascot/photo.webp" width="328" height="372" alt="" aria-hidden="true">
         </div>
         <p class="section-lead">Simple on the surface, with the extras when you want them.</p>

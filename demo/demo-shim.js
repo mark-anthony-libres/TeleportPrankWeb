@@ -40,10 +40,40 @@
       }
     },
     tabs: {
-      query: function () { return Promise.resolve([]); },
+      query: function () { return Promise.resolve([{ id: 1, url: 'https://example.com/' }]); },
       sendMessage: function () { return Promise.resolve(); }
     },
-    scripting: { executeScript: function () { return Promise.resolve([]); } },
+    scripting: {
+      executeScript: function (options) {
+        if (!options || typeof options.func !== 'function' || options.args) return Promise.resolve([]);
+        return new Promise(function (resolve) {
+          var finished = false;
+          var useSample = function () {
+            if (finished) return;
+            finished = true;
+            resolve([{ result: { lat: 1.2834, lng: 103.8607 } }]);
+            if (typeof window.showToast === 'function') {
+              window.showToast('Demo: your browser blocked location access here, so a sample page location (Singapore) was used.', 'info');
+            }
+          };
+          var timer = setTimeout(useSample, 6000);
+          try {
+            Promise.resolve(options.func()).then(function (result) {
+              if (finished) return;
+              finished = true;
+              clearTimeout(timer);
+              resolve([{ result: result }]);
+            }, function () {
+              clearTimeout(timer);
+              useSample();
+            });
+          } catch (error) {
+            clearTimeout(timer);
+            useSample();
+          }
+        });
+      }
+    },
     runtime: { sendMessage: function () {} }
   };
 

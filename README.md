@@ -14,6 +14,8 @@ Developed by [marklibres.site](https://marklibres.site).
 - FAQ
 - Download banner with the mascot
 - Light theme and a responsive layout for phones
+- Features section with a sky and clouds background that moves with a parallax on scroll (add `data-parallax-bg` to any other section to give it the same effect)
+- Hero parallax: the background, text, popup, mascot, sticker and city cards move at different speeds on scroll, and shift slightly with the mouse (mouse effect only on devices with a pointer)
 - Animations: hero entrance, floating mascot and stickers, and scroll-reveal on every section (disabled when the visitor prefers reduced motion)
 
 ## Run it locally
@@ -33,11 +35,12 @@ When opened as a local file, the demo map uses Esri tiles. When hosted over http
 |-- styles.css          # Site styles
 |-- script.js           # Browser-aware install link and copy button
 |-- demo.js             # Hosts the live demo and the "What a website sees" panel
-|-- motion.js           # Scroll-reveal animations (skipped for reduced motion)
+|-- motion.js           # Hero parallax and scroll-reveal animations (skipped for reduced motion)
 |-- assets/
 |   |-- icon.png        # Extension icon
 |   |-- screenshot.png  # Hero screenshot of the popup
 |   |-- hero-bg.jpg     # Hero background artwork
+|   |-- features-bg.jpg # Features section background artwork
 |   |-- mascot/         # Mascot poses (transparent WebP)
 |   |-- stickers/       # Prank Mode bubble and city photo cards (transparent WebP)
 |   `-- pack/           # Wordmark, landmark stickers and mascot emotes (transparent WebP)
